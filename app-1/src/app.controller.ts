@@ -13,4 +13,9 @@ export class AppController {
   getListaProductos(){
     return this.appService.getListaProductos();
   }
+
+  @Get("/listaAlumnos")
+  getListaAlumnos(){
+    return this.appService.getListaAlumnos();
+  }
 }
