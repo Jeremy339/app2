@@ -3,29 +3,26 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello!';
+    return 'Hello World!';
   }
 
-  getListaProductos() {
+  getListaProductos(){
     return [
       {
         nombre: "Teclado",
-        cantidad: 200,
-        precio: 40,
+        precio: 25,
+        stock: 40,
+        imagen:"https://www.computron.com.ec/wp-content/uploads/2023/05/920-010442-1.jpg"
       },
       {
         nombre: "Monitor",
-        cantidad: 30,
-        precio: 350,
+        precio: 250,
+        stock: 20,
+        imagen: "https://maxitec.vteximg.com.br/arquivos/ids/191082-1000-1000/maxitec-monoprice-monitor-de-24-pulgadas-crystalpro-75hz-1920x1080-ips-44029-1.jpg?v=638304370951770000"
       },
-
-      {
-        nombre: "Monitor",
-        cantidad: 30,
-        precio: 350,
-      },
-      { nombre: "mouse", cantidad: 5, precio: 10 }
-    ]
+      { nombre: "Mouse", precio: 25, stock: 10, imagen:"https://www.steren.com.ec/media/catalog/product/cache/532829604b379f478db69368d14615cd/image/21364eb0d/mouse-inalambrico-800-1200-1600-dpi-con-acabado-tipo-piel.jpg"},
+      { nombre: "Parlante", precio: 30, stock: 10, imagen:"https://maxitec.vteximg.com.br/arquivos/ids/190678-1000-1000/maxitec-logitech-parlantes-multimedia-para-computadora-980-000012-1.jpg?v=638304416744200000"}
+    ];
   }
 
   getListaAlumnos() {

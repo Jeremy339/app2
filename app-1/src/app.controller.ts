@@ -9,9 +9,11 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+  
   @Get("/producto")
-  getListaProductos(){
-    return this.appService.getListaProductos();
+  funListarProductos(){
+    let productos = this.appService.getListaProductos();
+    return productos;
   }
 
   @Get("/listaAlumnos")
