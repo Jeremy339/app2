@@ -11,8 +11,9 @@ export class ProductoController {
     }
     @Post()
     funGuardar(@Body()prod){
-      return prod
-    }
+        let respuesta =this.productoService.create(prod);
+        return respuesta
+    } 
 
     @Get(':id')
     funMostrar(@Param('id')id){
