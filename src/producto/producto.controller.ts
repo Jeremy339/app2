@@ -25,6 +25,7 @@ export class ProductoController {
     @Delete(':id')
     funEliminar(@Param('id')id){
         return "Eliminando" +id;
+        
     }
 }
 
