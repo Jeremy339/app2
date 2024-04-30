@@ -1,11 +1,13 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { ProductoService } from './producto.service';
 
 @Controller('producto')
 export class ProductoController {
+    constructor(private readonly productoService: ProductoService) {}
 
     @Get()
-    funListar(){
-      return["Teclado", "Monitor", "Ratón"]
+    funListar(){ let productos=this.productoService.findAll
+      return productos
     }
     @Post()
     funGuardar(@Body()prod){
