@@ -6,9 +6,11 @@ export class ProductoController {
     constructor(private readonly productoService: ProductoService) {}
 
     @Get()
-    funListar(){ let productos=this.productoService.findAll
+    funListar(){
+        let productos=this.productoService.findAll()
       return productos
     }
+
     @Post()
     funGuardar(@Body()prod){
         let respuesta =this.productoService.create(prod);
@@ -22,12 +24,13 @@ export class ProductoController {
     
     @Put(':id')
     funModificar(@Param('id')id,@Body()prod){
-        return "Modificando" +id;
+        return this.productoService.update(id,prod)
     }
 
     @Delete(':id')
     funEliminar(@Param('id')id){
         return "Eliminando" +id;  
+        
     }
 }
 
